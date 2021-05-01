@@ -1,5 +1,5 @@
 import './style.css';
-import { Layer } from './Layer/index.js';
+import { Drink } from './Drink/index.js';
 
 console.log('funguju!');
 
@@ -29,7 +29,7 @@ const drinkCupElm = document.querySelector('.drink__cup');
   drinkCupElm.classList.add('drink__cup--selected');
 }); */
 
-let ordered = '';
+/* let ordered = '';
 orderBtnElm.addEventListener('click', () => {
   if (ordered) {
     orderBtnElm.textContent = 'Zrušit';
@@ -40,7 +40,7 @@ orderBtnElm.addEventListener('click', () => {
     drinkCupElm.classList.remove('drink__cup--selected');
     ordered = true;
   }
-});
+}); */
 
 /*......ingredience jako komponenty.....*/
 
@@ -67,6 +67,26 @@ const layers = [
   },
 ];
 
-for (let i = 0; i < layers.length; i++) {
+/* for (let i = 0; i < layers.length; i++) {
   drinkInfoElm.innerHTML += Layer(layers[i]);
-}
+} */
+
+/*............napoj jako komponenta...........*/
+
+const drink = {
+  id: 'romano',
+  name: 'Romano',
+  ordered: false,
+  layers: [
+    {
+      color: '#fbdf5b',
+      label: 'citrón',
+    },
+    {
+      color: '#613916',
+      label: 'espresso',
+    },
+  ],
+};
+
+document.querySelector('.drinks-list').appendChild(Drink(drink));
