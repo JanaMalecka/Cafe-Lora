@@ -313,3 +313,15 @@ nav a:hover {
     outline: none;
   }
 }
+
+/*...................interier kavarny...galerie*/
+.interior {
+  font-size: 45px;
+  outline: red solid 2px;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  padding: 50px 50px 20px 50px;
+  background-color: rgba(128, 0, 0, 0.5);
+}
