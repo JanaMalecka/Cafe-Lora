@@ -24,5 +24,20 @@ export const Drink = ({ id, name, ordered, layers }) => {
   <button class="order-btn">Objednat</button>
   </div>
 `;
+
+  const orderBtnElm = drink.querySelector('.order-btn');
+  const drinkCupElm = drink.querySelector('.drink__cup');
+
+  orderBtnElm.addEventListener('click', () => {
+    if (ordered) {
+      orderBtnElm.textContent = 'Zrušit';
+      drinkCupElm.classList.add('drink__cup--selected');
+      ordered = false;
+    } else {
+      orderBtnElm.textContent = 'Objednat';
+      drinkCupElm.classList.remove('drink__cup--selected');
+      ordered = true;
+    }
+  });
   return drink;
 };
