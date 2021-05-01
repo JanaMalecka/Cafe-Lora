@@ -98,23 +98,6 @@ nav a:hover {
   display: none;
 }
 
-.nav-btn {
-  width: 3rem;
-  height: 3rem;
-  padding: 0;
-  border: none;
-
-  background-color: transparent;
-  background-image: url('./img/menu.png');
-  background-size: contain;
-
-  cursor: pointer;
-}
-
-.nav-btn:focus {
-  outline: none;
-}
-
 .banner {
   padding-top: 0;
 
@@ -308,5 +291,25 @@ nav a:hover {
 
   .drink {
     width: 33.333%;
+  }
+}
+/*................hamburger ikonka jen na mobilu.........*/
+
+@media (max-width: 768px) {
+  .nav-btn {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: none;
+
+    background-color: transparent;
+    background-image: url('./img/menu.png');
+    background-size: contain;
+
+    cursor: pointer;
+  }
+
+  .nav-btn:focus {
+    outline: none;
   }
 }
