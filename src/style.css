@@ -50,6 +50,8 @@ header {
   height: 5rem;
 
   background-color: #301a1a;
+  position: fixed;
+  width: 100%;
 }
 
 .topbar {
