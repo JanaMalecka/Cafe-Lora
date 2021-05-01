@@ -92,7 +92,7 @@ const drink = {
 document.querySelector('.drinks-list').appendChild(Drink(drink));
 
 /*...............seznam napoju..............*/
-const drinks = [
+/* const drinks = [
   {
     id: 'cappuccino',
     name: 'Cappuccino',
@@ -127,8 +127,16 @@ const drinks = [
       },
     ],
   },
-];
+]; */
 
-for (let i = 0; i < drinks.length; i++) {
+/* for (let i = 0; i < drinks.length; i++) {
   document.querySelector('.drinks-list').appendChild(Drink(drinks[i]));
-}
+} */
+
+fetch('https://apps.kodim.cz/daweb/cafelora/api/drinks')
+  .then((response) => response.json())
+  .then((drinks) => {
+    for (let i = 0; i < drinks.length; i++) {
+      document.querySelector('.drinks-list').appendChild(Drink(drinks[i]));
+    }
+  });

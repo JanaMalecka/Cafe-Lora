@@ -165,6 +165,8 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+
+  display: flex; /*pridano*/
 }
 
 .contacts {
@@ -182,16 +184,19 @@ nav a:hover {
   height: auto;
 }
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .drink {
     width: 50%;
   }
-}
+} */
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 960px;
   }
+  .nav-btn {
+    display: none;
+  } /*pridano, aby pro velke sirky zmizel hamburger*/
 
   .banner {
     height: 600px;
@@ -227,9 +232,9 @@ nav a:hover {
     text-align: center;
   }
 
-  .drink {
+  /* .drink {
     width: 33.333%;
-  }
+  } */
 }
 /*................hamburger ikonka jen na mobilu.........*/
 
@@ -254,12 +259,18 @@ nav a:hover {
 
 /*...................interier kavarny...galerie*/
 .interior {
-  font-size: 45px;
-  outline: red solid 2px;
+  font-size: 2rem;
   font-style: italic;
   text-align: center;
+  padding-top: 15rem;
+  margin: 1.5rem;
+  align-content: center;
+}
+.gallery__container {
+  height: 100%;
+  background-color: rgba(128, 0, 0, 0.5);
+  width: 80%;
   display: flex;
   align-content: center;
-  padding: 50px 50px 20px 50px;
-  background-color: rgba(128, 0, 0, 0.5);
+  margin-top: 10rem 0 10rem 0;
 }
