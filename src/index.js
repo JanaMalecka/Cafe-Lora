@@ -21,9 +21,9 @@ for (let i = 0; i < navLinkElm.length; i++) {
 
 /*...........objednavani........*/
 
-const orderBtnElm = document.querySelector('.order-btn');
+/* const orderBtnElm = document.querySelector('.order-btn');
 const drinkCupElm = document.querySelector('.drink__cup');
-
+ */
 /* orderBtnElm.addEventListener('click', () => {
   orderBtnElm.textContent = 'Zrušit';
   drinkCupElm.classList.add('drink__cup--selected');
@@ -90,3 +90,45 @@ const drink = {
 };
 
 document.querySelector('.drinks-list').appendChild(Drink(drink));
+
+/*...............seznam napoju..............*/
+const drinks = [
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    ordered: false,
+    layers: [
+      {
+        color: '#feeeca',
+        label: 'mléčná pěna',
+      },
+      {
+        color: '#fed7b0',
+        label: 'teplé mléko',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
+  {
+    id: 'romano',
+    name: 'Romano',
+    ordered: false,
+    layers: [
+      {
+        color: '#fbdf5b',
+        label: 'citrón',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
+];
+
+for (let i = 0; i < drinks.length; i++) {
+  document.querySelector('.drinks-list').appendChild(Drink(drinks[i]));
+}
